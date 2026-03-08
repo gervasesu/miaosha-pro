@@ -60,4 +60,13 @@ public interface SeckillService {
 	 * @return 根据不同的结果返回不同的实体信息
 	 */
 	SeckillExecution executeSeckillProcedure(long seckillId,long userPhone,String md5);
+	
+	/**
+	 * 查询秒杀结果(用于轮询)
+	 * 
+	 * @param seckillId 秒杀商品ID
+	 * @param userPhone 用户手机号
+	 * @return 秒杀结果
+	 */
+	SeckillExecution getSeckillResult(long seckillId, long userPhone);
 }

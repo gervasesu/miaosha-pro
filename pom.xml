@@ -135,6 +135,25 @@
 			<artifactId>jedis</artifactId>
 			<version>2.7.3</version>
 		</dependency>
+		
+		<!-- Spring Data Redis -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>1.8.23.RELEASE</version>
+		</dependency>
+		
+		<!-- RabbitMQ -->
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+			<version>1.7.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>3.6.10</version>
+		</dependency>
 
 		<!--prostuff序列化依赖 -->
 		<dependency>

@@ -163,4 +163,13 @@ public class SeckillServiceImpl implements SeckillService {
 			return new SeckillExecution(seckillId, SeckillStatEnum.stateOf(result));
 		}
 	}
+	
+	@Override
+	public SeckillExecution getSeckillResult(long seckillId, long userPhone) {
+		SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId, userPhone);
+		if (successKilled != null) {
+			return new SeckillExecution(seckillId, SeckillStatEnum.SUCCESS, successKilled);
+		}
+		return new SeckillExecution(seckillId, SeckillStatEnum.QUEUING, null);
+	}
 }
